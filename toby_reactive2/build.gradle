@@ -1,0 +1,7 @@
+
+
+dependencies {
+    compile('org.springframework.boot:spring-boot-starter-webflux')
+
+    compile group: 'io.netty', name: 'netty-all', version: '4.1.29.Final'
+}
