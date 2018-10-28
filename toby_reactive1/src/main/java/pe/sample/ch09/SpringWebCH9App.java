@@ -1,6 +1,7 @@
 package pe.sample.ch09;
 
 import io.netty.channel.nio.NioEventLoopGroup;
+import lombok.Getter;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;

@@ -1,11 +1,5 @@
 
-
 dependencies {
     compile('org.springframework.boot:spring-boot-starter-web')
-
     compile group: 'io.netty', name: 'netty-all', version: '4.1.29.Final'
-
-    compile group: 'org.reactivestreams', name: 'reactive-streams', version: '1.0.2'
-    compile group: 'io.projectreactor', name: 'reactor-core', version: '3.1.9.RELEASE'
-
 }

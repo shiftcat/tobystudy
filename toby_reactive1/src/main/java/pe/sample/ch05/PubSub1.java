@@ -1,13 +1,21 @@
 package pe.sample.ch05;
 
+import org.reactivestreams.Publisher;
+import org.reactivestreams.Subscriber;
+import org.reactivestreams.Subscription;
+
 import java.util.Arrays;
 import java.util.Iterator;
-import java.util.concurrent.*;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.TimeUnit;
 
 // JDK 9 이상 : JDK8 이라면 reactivestreams에도 동일한 API 존재 함.
+/*
 import java.util.concurrent.Flow.Publisher;
 import java.util.concurrent.Flow.Subscriber;
 import java.util.concurrent.Flow.Subscription;
+*/
 
 public class PubSub1
 {
@@ -63,7 +71,7 @@ public class PubSub1
         Subscriber<Integer> s = new Subscriber<Integer>() {
             Subscription subscription;
             @Override
-            public void onSubscribe(Flow.Subscription subscription) {
+            public void onSubscribe(Subscription subscription) {
                 System.out.println(Thread.currentThread() + " OnSubscribe");
                 this.subscription = subscription;
                 this.subscription.request(1);
